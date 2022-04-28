@@ -41,7 +41,7 @@ def train_gcn(features, adj_train, args, graph_type,device):
 
     # Store original adjacency matrix (without diagonal entries) for later
     adj_orig = adj_train
-    adj_orig = adj_orig - sp.dia_matrix((adj_orig.diagonal()[np.newaxis, :], [0]), shape=adj_orig.shape)#邻接矩阵对角线值全为0
+    adj_orig = adj_orig - sp.dia_matrix((adj_orig.diagonal()[np.newaxis, :], [0]), shape=adj_orig.shape)
     adj_orig.eliminate_zeros()
 
     adj = adj_train
