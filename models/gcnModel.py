@@ -42,13 +42,13 @@ class GraphConvolutionSparse(nn.Module):
         self.issparse = True
         self.features_nonzero = features_nonzero
     def forward(self,adj,inputs):
-        x = inputs#特征最大值50+
+        x = inputs
         x = dropout_sparse(x, 1 - self.dropout, self.features_nonzero)
         x = torch.matmul(x,self.weights)
-        #print(torch.max(x))#与权重相乘后最大值为13+
+        #print(torch.max(x))
         x = torch.matmul(adj,x)
-        #print(torch.max(x))#再次与邻接矩阵相乘后最大值为1200+
-        outputs = self.act(x)#激活后的输出1200+
+        #print(torch.max(x))
+        outputs = self.act(x)
         return outputs
 
 
@@ -98,15 +98,15 @@ class GCNModelVAE(torch.nn.Module):
                                           dropout=self.dropout)
         #self.relu = nn.ReLU()
         #self.dropout = nn.Dropout(dropout)
-        self.InnerProductDecoder = InnerProductDecoder(input_dim=self.hidden2_dim,act = lambda x: x)##解码器)
+        self.InnerProductDecoder = InnerProductDecoder(input_dim=self.hidden2_dim,act = lambda x: x)
     def forward(self, adj,x):
-        x = self.hidden1(adj,x)#经过第一层最大值1200+    【15133，800】
+        x = self.hidden1(adj,x)
 
-        self.z_mean_value = self.z_mean(adj,x)#17W+         【15133，400】
+        self.z_mean_value = self.z_mean(adj,x)
 
-        self.z_log_std_value = self.z_log_std(adj,x)#18W+        【15133，400】
+        self.z_log_std_value = self.z_log_std(adj,x)
 
-        z = self.z_mean_value + torch.randn(self.n_samples, self.hidden2_dim,device=self.device) * torch.exp(self.z_log_std_value)#无穷                #15133,400
+        z = self.z_mean_value + torch.randn(self.n_samples, self.hidden2_dim,device=self.device) * torch.exp(self.z_log_std_value)
 
         reconstructions = self.InnerProductDecoder(z)
         return self.z_mean_value,reconstructions
