@@ -1,0 +1,2 @@
+~59 proteins in Human dataset were not recorded in STRING database, so the embeddings of these ~59 proteins were not available from PPI and SSN. 
+The embeddings of remaining proteins were used to this CPI task.
