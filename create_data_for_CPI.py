@@ -116,7 +116,7 @@ print("\nConvert to pytorch data format...")
 for dataset in datasets:
     df_raw = pd.read_table('data/' + dataset + '/' + dataset + '.txt', sep=' ', header=None)
 
-    df = df_raw.drop(df[(df[0] == '[I]')
+    df = df_raw.drop(df[(df[0] == '[I]')# We removed drug molecules that could not be converted into GRAPH by RDkit. 2022.04.30
                         | (df[0] == '[Na+].[Na+].[Cl-].[Cl-].[Cl-].[Cl-].[Pt+2]')
                         | (df[0] == 'C.[Ti]')
                         | (df[0] == '[Na+].[Ag+]')
