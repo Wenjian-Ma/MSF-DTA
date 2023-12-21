@@ -4,10 +4,10 @@ import sys, os
 from random import shuffle
 import torch
 import torch.nn as nn
-from models.gat import GATNet
-from models.gat_gcn import GAT_GCN
+#from models.gat import GATNet
+#from models.gat_gcn import GAT_GCN
 from models.gcn import GCNNet
-from models.ginconv import GINConvNet
+#from models.ginconv import GINConvNet
 from utils import *
 
 # training function at each epoch
@@ -37,7 +37,7 @@ def predicting(model, device, loader):
 
 
 datasets = [['davis','kiba'][int(sys.argv[1])]] 
-modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
+modeling = [GCNNet][int(sys.argv[2])]
 model_st = modeling.__name__
 
 cuda_name = "cuda:0"
