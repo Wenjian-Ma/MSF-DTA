@@ -1,10 +1,10 @@
 import sys
 import torch.nn as nn
 from sklearn.metrics import roc_auc_score, precision_recall_curve, auc, precision_score, recall_score
-from models.gat import GATNet
-from models.gat_gcn import GAT_GCN
+#from models.gat import GATNet
+#from models.gat_gcn import GAT_GCN
 from models.gcn import GCNNet
-from models.ginconv import GINConvNet
+#from models.ginconv import GINConvNet
 from utils import *
 
 
@@ -52,7 +52,7 @@ def predicting(model, device, loader):
 
 
 datasets = [['Human'][0]]
-modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][3]
+modeling = [GCNNet][0]
 model_st = modeling.__name__
 
 print("dataset:", datasets)
