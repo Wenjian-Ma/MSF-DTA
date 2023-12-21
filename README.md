@@ -35,19 +35,19 @@ DTA task (Davis and KIBA).
 ---
 1) Evaluating trained model by us on Davis dataset.
 
-    ```python test.py 0 3 0```
+    ```python test.py 0 0 0```
 
 2) Evaluating trained model by us on KIBA dataset.
 
-    ```python test.py 1 3 0```
+    ```python test.py 1 0 0```
 
 3) If you want to train your own model on Davis dataset.
 
-    ```python training_validation.py.py 0 3 0```
+    ```python training_validation.py.py 0 0 0```
 
 4) If you want to train your own model on KIBA dataset.
 
-    ```python training_validation.py.py 1 3 0```
+    ```python training_validation.py.py 1 0 0```
   
 CPI task (Human).
 ---
