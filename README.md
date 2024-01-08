@@ -60,3 +60,19 @@ latent representations.
 if you want to train your own latent representations.
 
 ```python embeddings_gen.py```
+
+Cite our work
+---
+if you use the conclusion, code, or data in our work, please cite:
+```
+@article{ma2023predicting,
+  title={Predicting Drug-Target Affinity by Learning Protein Knowledge From Biological Networks},
+  author={Ma, Wenjian and Zhang, Shugang and Li, Zhen and Jiang, Mingjian and Wang, Shuang and Guo, Nianfan and Li, Yuanfei and Bi, Xiangpeng and Jiang, Huasen and Wei, Zhiqiang},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  volume={27},
+  number={4},
+  pages={2128--2137},
+  year={2023},
+  publisher={IEEE}
+}
+```
