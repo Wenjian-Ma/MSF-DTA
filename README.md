@@ -15,7 +15,7 @@ rdkit == 2020.09.5
 
 numpy == 1.21.2
 
-Data preparation
+Data preparation (password: 1234)
 ---
 1. 
    Unzipping all ''**.rar files**'' to their path.
