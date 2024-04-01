@@ -65,14 +65,14 @@ Cite our work
 ---
 if you use the conclusion, code, or data in our work, please cite:
 ```
-@article{ma2023predicting,
-  title={Predicting Drug-Target Affinity by Learning Protein Knowledge From Biological Networks},
-  author={Ma, Wenjian and Zhang, Shugang and Li, Zhen and Jiang, Mingjian and Wang, Shuang and Guo, Nianfan and Li, Yuanfei and Bi, Xiangpeng and Jiang, Huasen and Wei, Zhiqiang},
-  journal={IEEE Journal of Biomedical and Health Informatics},
-  volume={27},
-  number={4},
-  pages={2128--2137},
-  year={2023},
-  publisher={IEEE}
-}
+@ARTICLE{10027191,
+author={Ma, Wenjian and Zhang, Shugang and Li, Zhen and Jiang, Mingjian and Wang, Shuang and Guo, Nianfan and Li, Yuanfei and Bi, Xiangpeng and Jiang, Huasen and Wei, Zhiqiang},
+journal={IEEE Journal of Biomedical and Health Informatics}, 
+title={Predicting Drug-Target Affinity by Learning Protein Knowledge From Biological Networks}, 
+year={2023},
+volume={27},
+number={4},
+pages={2128-2137},
+keywords={Proteins;Protein engineering;Drugs;Amino acids;Feature extraction;Predictive models;Knowledge engineering;Drug-target affinity;variational graph auto-encoders;graph convolutional network;protein-protein interaction},
+doi={10.1109/JBHI.2023.3240305}}
 ```
